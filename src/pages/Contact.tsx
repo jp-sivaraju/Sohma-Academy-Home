@@ -15,11 +15,11 @@ const Contact = () => {
       <section className="pt-20 pb-12 circuit-bg">
         <div className="container mx-auto px-4">
           <div className="relative">
-            {/* Cyan accent line */}
-            <div className="absolute left-0 top-0 w-1 h-20 bg-primary"></div>
+            {/* Cyan accent line - animated from bottom to top */}
+            <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact</h1>
-              <p className="text-lg text-muted-foreground max-w-2xl">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Contact</h1>
+              <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-delayed">
                 Would you like to have a similar program introduced for your school or 
                 institution's children? Then don't hesitate to reach us out
               </p>
@@ -33,7 +33,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div>
+            <div className="animate-slide-in-right">
               <h2 className="text-3xl font-bold mb-6">Need Help?</h2>
               <p className="text-muted-foreground mb-12">
                 You can reach us out on the below mentioned details
@@ -85,7 +85,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div>
+            <div className="animate-slide-in-left">
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
