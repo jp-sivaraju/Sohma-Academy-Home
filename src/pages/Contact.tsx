@@ -18,7 +18,7 @@ const Contact = () => {
             {/* Cyan accent line - animated from bottom to top */}
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Contact</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary animate-fade-in">Contact</h1>
               <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-delayed">
                 Would you like to have a similar program introduced for your school or 
                 institution's children? Then don't hesitate to reach us out
@@ -94,7 +94,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       placeholder="Name"
-                      className="bg-tech-light border-border focus:border-primary transition-colors h-12"
+                      className=" border-border focus:border-primary transition-colors h-12"
                     />
                   </div>
                   <div>
@@ -103,7 +103,7 @@ const Contact = () => {
                     </label>
                     <Input 
                       placeholder="Phone"
-                      className="bg-tech-light border-border focus:border-primary transition-colors h-12"
+                      className=" border-border focus:border-primary transition-colors h-12"
                     />
                   </div>
                 </div>
@@ -115,7 +115,7 @@ const Contact = () => {
                   <Input 
                     type="email" 
                     placeholder="Email"
-                    className="bg-tech-light border-border focus:border-primary transition-colors h-12"
+                    className=" border-border focus:border-primary transition-colors h-12"
                     required
                   />
                 </div>
@@ -126,7 +126,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     placeholder="Subject"
-                    className="bg-tech-light border-border focus:border-primary transition-colors h-12"
+                    className=" border-border focus:border-primary transition-colors h-12"
                     required
                   />
                 </div>
@@ -138,7 +138,7 @@ const Contact = () => {
                   <Textarea 
                     placeholder="Message"
                     rows={6}
-                    className="bg-tech-light border-border focus:border-primary transition-colors resize-none"
+                    className=" border-border focus:border-primary transition-colors resize-none"
                   />
                 </div>
                 

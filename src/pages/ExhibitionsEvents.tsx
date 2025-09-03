@@ -3,6 +3,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import ee1 from "../assets/ee1.png"
+import ee2 from "../assets/ee2.png"
+import ee3 from "../assets/ee3.png"
+
 
 const ExhibitionsEvents = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState<{[key: string]: number}>({});
@@ -14,66 +18,12 @@ const ExhibitionsEvents = () => {
       subtitle: "Our first milestone - a grand opening event",
       description: "Students enthusiastic participation at",
       images: [
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300", 
-        "/api/placeholder/400/300"
+        ee1,
+        ee2,
+        ee3
       ]
     },
-    {
-      id: "event2", 
-      title: "ISTE Exhibition at OU",
-      subtitle: "Collaboration with premier institutions",
-      description: "Our partnership with JNTUH under OU outreach",
-      images: [
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300"
-      ]
-    },
-    {
-      id: "event3",
-      title: "Leadership Visit at Synchrony Exhibition", 
-      subtitle: "Industry leaders recognizing our work",
-      description: "State 30th Nov, 2023 | Venue: Synchrony, Hyderabad",
-      images: [
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300"
-      ]
-    },
-    {
-      id: "event4",
-      title: "Leadership Visit at Synchrony Exhibition",
-      subtitle: "Continued partnership and growth", 
-      description: "State 4th Aug, 2023 | Venue: Synchrony, Hyderabad",
-      images: [
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300", 
-        "/api/placeholder/400/300"
-      ]
-    },
-    {
-      id: "event5",
-      title: "Guest Lecture series at JNTU-GV",
-      subtitle: "Academic excellence and knowledge sharing",
-      description: "Date: 30th Nov, 2023 | Venue: Vizianagaram, Hyderabad",
-      images: [
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300"
-      ]
-    },
-    {
-      id: "event6",
-      title: "3rd Annual Robotics Exhibition - 2023",
-      subtitle: "Our biggest event yet",
-      description: "Date: 30th Nov, 2023 | Venue: Synchrony, Hyderabad",
-      images: [
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300",
-        "/api/placeholder/400/300"
-      ]
-    }
+ 
   ];
 
   // Auto-scroll images every 3 seconds

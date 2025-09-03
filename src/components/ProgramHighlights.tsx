@@ -78,7 +78,7 @@ const ProgramHighlights = () => {
       icon: Lightbulb,
       title: "Creative Robotics Projects",
       description: "Children will complete 21 activities that make use of various types of sensors, motors, displays and other accessories.",
-      featured: true
+      featured: false
     },
     {
       icon: Calendar,
@@ -98,14 +98,14 @@ const ProgramHighlights = () => {
   ];
 
   return (
-    <section className="py-20 circuit-bg">
+    <section className=" circuit-bg bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h3 className="text-sm font-medium text-primary mb-4 tracking-wider">
+          <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider">
             ROBOTICS IN ACADEMICS
           </h3>
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-black">
             Our Program Highlights
           </h2>
         </div>
@@ -116,19 +116,20 @@ const ProgramHighlights = () => {
             const Icon = highlight.icon;
             return (
               <Card
-                key={index}
-                className={`p-6 text-center tech-glow hover:scale-105 transition-transform duration-300 ${
-                  highlight.featured ? 'ring-2 ring-primary' : ''
-                }`}
-              >
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold mb-3">{highlight.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {highlight.description}
-                </p>
-              </Card>
+  key={index}
+  className={`p-6 text-center bg-white rounded-xl border border-gray-200 transition-all duration-300 transform
+    hover:border-primary hover:ring-2 hover:ring-primary hover:shadow-xl hover:scale-105
+    ${highlight.featured ? 'ring-2 ring-primary' : ''}`}
+>
+  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+    <Icon className="w-8 h-8 text-primary-foreground" />
+  </div>
+  <h3 className="text-lg font-semibold mb-3">{highlight.title}</h3>
+  <p className="text-sm text-muted-foreground leading-relaxed">
+    {highlight.description}
+  </p>
+</Card>
+
             );
           })}
         </div>
@@ -136,7 +137,7 @@ const ProgramHighlights = () => {
         {/* Statistics Section */}
         <div className="relative">
           <div className="text-center mb-12">
-            <h3 className="text-sm font-medium text-primary mb-4 tracking-wider">
+            <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider">
               ROBOTICS IN ACADEMICS
             </h3>
             <h2 className="text-2xl font-bold mb-4">
@@ -146,23 +147,27 @@ const ProgramHighlights = () => {
 
           {/* Stats Background Image Overlay */}
           <div className="relative bg-gradient-dark rounded-lg overflow-hidden">
-            <div className="absolute inset-0 bg-black/60" />
+            <div className="absolute inset-0 bg-white" />
             
             {/* Stats Grid */}
-            <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 p-12">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div key={index} className="text-center">
-                    <Icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-white mb-2">
-                      <Counter end={stat.number} suffix={stat.suffix} />
-                    </div>
-                    <p className="text-sm text-gray-300">{stat.label}</p>
-                  </div>
-                );
-              })}
-            </div>
+            <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 p-12 text-white">
+  {stats.map((stat, index) => {
+    const Icon = stat.icon;
+    return (
+      <div
+        key={index}
+        className="text-center bg-white/5 p-4 rounded-lg border border-white/10 hover:border-primary hover:shadow-lg transition-all duration-300"
+      >
+        <Icon className="w-8 h-8 text-primary mx-auto mb-3" />
+        <div className="text-3xl  text-black font-bold mb-2">
+          <Counter end={stat.number} suffix={stat.suffix} />
+        </div>
+        <p className="text-sm text-black">{stat.label}</p>
+      </div>
+    );
+  })}
+</div>
+
           </div>
         </div>
       </div>

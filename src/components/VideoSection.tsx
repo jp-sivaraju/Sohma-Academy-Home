@@ -9,12 +9,12 @@ const VideoSection = () => {
   };
 
   return (
-    <section className="py-20 circuit-bg">
+    <section id="video-section" className="py-20 circuit-bg bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8">
-            <h2 className="text-5xl md:text-6xl font-bold">
+            <h2 className="text-5xl md:text-6xl  text-black font-bold">
               Robotics is Fun,
               <br />
               <span className="hero-text">Exciting &</span>

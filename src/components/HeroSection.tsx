@@ -42,7 +42,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-bg">
+    <section className="relative min-h-screen mt-8 flex items-center justify-center overflow-hidden circuit-bg">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -50,27 +50,34 @@ const HeroSection = () => {
           alt="Robotics Education"
           className="w-full h-full object-cover transition-opacity duration-1000"
         />
-        <div className="absolute inset-0 bg-background/80" />
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-10 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-sm font-medium text-primary mb-4 animate-fade-in-up tracking-wider">
             ROBOTICS IN ACADEMICS
           </h2>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up animation-delay-200 text-white">
             {slides[currentSlide].title}
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up animation-delay-400">
+          <p className="text-xl md:text-2xl text-muted-foreground text-white mb-8 animate-fade-in-up animation-delay-400">
             {slides[currentSlide].subtitle}
           </p>
           <Button 
-            size="lg" 
-            className="tech-glow animate-fade-in-up animation-delay-600"
-          >
-            Discover More
-          </Button>
+  size="lg" 
+  className="tech-glow animate-fade-in-up animation-delay-600"
+  onClick={() => {
+    const section = document.getElementById("video-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+>
+  Discover More
+</Button>
+
         </div>
       </div>
 

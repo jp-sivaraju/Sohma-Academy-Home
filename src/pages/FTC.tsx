@@ -2,18 +2,22 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { X } from "lucide-react";
+import ftc1 from "../assets/ftc1.png"
+
+import ftc2 from "../assets/ftc2.png"
+import ftc3 from "../assets/ftc3.png"
+import ftc4 from "../assets/ftc4.png"
+
 
 const FTC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Sample FTC images - these would be your actual competition photos
   const ftcImages = [
-    "/lovable-uploads/9f636669-0b5d-4cbd-8674-e435061416ed.png",
-    "/lovable-uploads/aafe940f-9f44-4180-95a4-b769b4b70e95.png",
-    "/lovable-uploads/3aa18a53-51db-4237-8189-88f8c71e3d70.png",
-    "/lovable-uploads/3ac74b77-1d7b-4aed-9ac3-1993dfecd735.png",
-    "/lovable-uploads/03d43c1b-0227-4294-86b5-d2f962ae3d3f.png",
-    "/lovable-uploads/21efb942-abd8-495d-8532-eb28e9f999c0.png"
+    ftc1,
+    ftc2,
+    ftc3,
+    ftc4
   ];
 
   const openLightbox = (imageSrc: string) => {
@@ -34,7 +38,7 @@ const FTC = () => {
           <div className="relative">
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">First Tech Challenge (FTC)</h1>
+              <h1 className="text-4xl md:text-5xl  text-primary font-bold mb-6 animate-fade-in">First Tech Challenge (FTC)</h1>
               <p className="text-lg text-muted-foreground max-w-4xl animate-fade-in-delayed">
                 We, Soham Academy (#24067) have made our debut in the First Tech Challenge (FTC), joining a vibrant community of innovators from
                 India, Kazakhstan and Sri Lanka! This was our first-ever international Robotics Competition participation. Our Robotics Club students

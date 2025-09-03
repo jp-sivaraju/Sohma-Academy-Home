@@ -3,6 +3,9 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, Download } from "lucide-react";
 import { useState } from "react";
+import monthly from "../assets/monthly.png"
+import ese1 from "../assets/ese1.png"
+import a1 from "../assets/a1.png"
 
 const Reports = () => {
   const [selectedEdition, setSelectedEdition] = useState("monthly");
@@ -17,21 +20,7 @@ const Reports = () => {
           category: "Monthly Report",
           date: "August 2025",
           url: "https://ria.sohamacademy.org/wp-content/uploads/2025/08/RiA-Brochure-August-2025-Edition.pdf",
-          image: "/api/placeholder/150/200"
-        },
-        {
-          title: "RiA Monthly - July 2025 Edition", 
-          category: "Monthly Report",
-          date: "July 2025",
-          url: "https://ria.sohamacademy.org/wp-content/uploads/2025/07/RiA-Brochure-July-2025-Edition.pdf",
-          image: "/api/placeholder/150/200"
-        },
-        {
-          title: "RiA Monthly - June 2025 Edition",
-          category: "Monthly Report", 
-          date: "June 2025",
-          url: "https://ria.sohamacademy.org/wp-content/uploads/2025/06/RiA-Brochure-June-2025-Edition.pdf",
-          image: "/api/placeholder/150/200"
+          image: monthly
         }
       ]
     },
@@ -44,15 +33,9 @@ const Reports = () => {
           category: "Exhibition Special",
           date: "March 2025",
           url: "https://ria.sohamacademy.org/wp-content/uploads/2025/03/RiA-1st-Annual-Robotics-Exhibition-Special-Edition.pdf",
-          image: "/api/placeholder/150/200"
+          image: ese1
         },
-        {
-          title: "Innovation Mela 2024 Special Edition",
-          category: "Exhibition Special",
-          date: "December 2024",
-          url: "https://ria.sohamacademy.org/wp-content/uploads/2024/12/Innovation-Mela-Special-Edition.pdf",
-          image: "/api/placeholder/150/200"
-        }
+       
       ]
     },
     annual: {
@@ -64,15 +47,9 @@ const Reports = () => {
           category: "Annual Report",
           date: "March 2025",
           url: "https://ria.sohamacademy.org/wp-content/uploads/2025/03/Soham-Activities-Report.pdf",
-          image: "/api/placeholder/150/200"
+          image: a1
         },
-        {
-          title: "Soham Activities Report 2023-24",
-          category: "Annual Report",
-          date: "March 2024",
-          url: "https://ria.sohamacademy.org/wp-content/uploads/2024/03/Soham-Activities-Report-2023-24.pdf",
-          image: "/api/placeholder/150/200"
-        }
+        
       ]
     }
   };
@@ -93,7 +70,7 @@ const Reports = () => {
           <div className="relative">
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Reports & Publications</h1>
+              <h1 className="text-4xl md:text-5xl  text-primary font-bold mb-6 animate-fade-in">Reports & Publications</h1>
               <p className="text-lg text-muted-foreground max-w-4xl animate-fade-in-delayed">
                 Explore our comprehensive collection of reports, publications, and documentation showcasing our journey, 
                 achievements, and impact in robotics education across various schools and institutions.

@@ -3,6 +3,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import circuitBg from "@/assets/circuit-bg.jpg";
+import about1 from "../assets/about1.png"
+import about2 from "../assets/about2.png"
+import about3 from "../assets/about3.png"
+import pro1 from "../assets/Pro1.png"
+import pro2 from "../assets/pro2.png"
+import pro3 from "../assets/pro3.png"
+import pro4 from "../assets/pro4.png"
+import pro5 from "../assets/pro5.png"
+import pro6 from "../assets/pro6.png"
+import pro7 from "../assets/pro7.png"
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -43,19 +53,19 @@ const About = () => {
       <Header />
       
       {/* Hero Section with Animated Background */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden mt-16">
         <div className="absolute inset-0">
           <img
             src={circuitBg}
             alt="Circuit Background"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-background/80" />
+          <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 animate-tech-pulse" />
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 animate-fade-in-up">
+        <div className="relative z-10 container mx-auto px-4  text-white text-center ">
+          <h3 className=" md:text-6xl font-bold mb-8 animate-fade-in-up">
             We believe that Robotics is
             <br />
             one of those skills which must
@@ -63,11 +73,11 @@ const About = () => {
             be taught to children at the
             <br />
             school level.
-          </h1>
+          </h3>
           
           <div className="mt-16 animate-fade-in-up animation-delay-600">
             <h2 className="text-2xl font-bold mb-4 hero-text">That's Why</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-white max-w-2xl mx-auto">
               We have put in every effort to
               <br />
               make it easy to follow and
@@ -81,11 +91,11 @@ const About = () => {
       </section>
 
       {/* History Section */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-sm font-medium text-primary mb-4 tracking-wider">
+              <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider">
                 HISTORY
               </h3>
               <h2 className="text-3xl font-bold mb-6">
@@ -114,17 +124,17 @@ const About = () => {
             
             <div className="grid grid-cols-1 gap-6">
               <img
-                src="/placeholder.svg"
+                src={about1}
                 alt="Students in classroom"
                 className="rounded-lg w-full h-48 object-cover"
               />
               <img
-                src="/placeholder.svg"
+                src={about2}
                 alt="Robotics workshop"
                 className="rounded-lg w-full h-48 object-cover"
               />
               <img
-                src="/placeholder.svg"
+                src={about3}
                 alt="Group learning session"
                 className="rounded-lg w-full h-48 object-cover"
               />
@@ -137,7 +147,7 @@ const About = () => {
       <section className="py-20 circuit-bg">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-sm font-medium text-primary mb-4 tracking-wider">
+            <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider">
               ABOUT SOHAM ACADEMY
             </h3>
           </div>
@@ -194,10 +204,10 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
+      <section className="">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h3 className="text-sm font-medium text-primary mb-4 tracking-wider animate-fade-in">
+            <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider animate-fade-in">
               OUR LEADERSHIP
             </h3>
             <h2 className="text-3xl md:text-4xl font-bold animate-fade-in animation-delay-200">
@@ -205,56 +215,42 @@ const About = () => {
             </h2>
           </div>
           
-          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-6 max-w-6xl mx-auto">
-            {[
-              { name: "Dr. Rajesh Kumar", role: "Founder & CEO", image: "/placeholder.svg" },
-              { name: "Priya Sharma", role: "Academic Director", image: "/placeholder.svg" },
-              { name: "Anjali Reddy", role: "Program Manager", image: "/placeholder.svg" },
-              { name: "Vikram Singh", role: "Technical Lead", image: "/placeholder.svg" },
-              { name: "Meera Patel", role: "Training Coordinator", image: "/placeholder.svg" },
-              { name: "Arjun Mehta", role: "Innovation Manager", image: "/placeholder.svg" },
-              { name: "Kavitha Rao", role: "Operations Head", image: "/placeholder.svg" },
-              { name: "Rohit Agarwal", role: "Research Director", image: "/placeholder.svg" },
-              { name: "Deepika Nair", role: "Quality Assurance", image: "/placeholder.svg" },
-              { name: "Suresh Gupta", role: "Field Coordinator", image: "/placeholder.svg" },
-              { name: "Nisha Joshi", role: "Student Relations", image: "/placeholder.svg" },
-              { name: "Kiran Kumar", role: "Tech Support", image: "/placeholder.svg" },
-              { name: "Pooja Verma", role: "Content Developer", image: "/placeholder.svg" },
-              { name: "Rahul Krishnan", role: "Partnership Manager", image: "/placeholder.svg" },
-              { name: "Sneha Iyer", role: "Marketing Head", image: "/placeholder.svg" },
-              { name: "Amit Khanna", role: "Finance Manager", image: "/placeholder.svg" },
-              { name: "Divya Pandey", role: "HR Manager", image: "/placeholder.svg" },
-              { name: "Harsh Agarwal", role: "IT Administrator", image: "/placeholder.svg" },
-              { name: "Ravi Shankar", role: "Regional Manager", image: "/placeholder.svg" },
-              { name: "Swati Singh", role: "Curriculum Designer", image: "/placeholder.svg" },
-              { name: "Manoj Tiwari", role: "Equipment Manager", image: "/placeholder.svg" },
-              { name: "Neha Kapoor", role: "Communications Lead", image: "/placeholder.svg" },
-              { name: "Sandeep Roy", role: "Data Analyst", image: "/placeholder.svg" },
-              { name: "Preeti Agarwal", role: "Event Coordinator", image: "/placeholder.svg" }
-            ].map((member, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-110 animate-fade-in"
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full aspect-square object-cover rounded-lg border-2 border-border group-hover:border-primary transition-colors duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-                  <div className="absolute bottom-2 left-2 right-2 text-white text-center">
-                    <p className="text-xs font-medium truncate">{member.name}</p>
-                    <p className="text-xs opacity-80 truncate">{member.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+  {[
+    { name: "Komaragiri Sahadev", role: "Founder & Director, Soham Academy of Human Excellence", image: pro1 },
+    { name: "B Jeshwanth", role: "Program Coordinator", image: pro2 },
+    { name: "Ganitha", role: "Program Coordinator", image: pro3 },
+    { name: "Y Anusha", role: "Core Team Member", image: pro4 },
+    { name: "Spandana", role: "Core Team Member", image: pro5 },
+    { name: "Rahul Goud", role: "Core Team Member", image: pro6 },
+    { name: "Ramya", role: "Core Team Member", image: pro7 },
+  ].map((member, index) => (
+    <div
+      key={index}
+      className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 animate-fade-in"
+      style={{ animationDelay: `${index * 50}ms` }}
+    >
+      <img
+        src={member.image}
+        alt={member.name}
+        className="w-full h-80 object-cover rounded-lg border-2 border-border group-hover:border-primary transition-colors duration-300"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+        <div className="absolute bottom-3 left-3 right-3 text-white text-center">
+          <p className="text-sm font-semibold">{member.name}</p>
+          <p className="text-xs opacity-80">{member.role}</p>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
-
-      <Footer />
+<div className="mt-20">
+   <Footer />
+</div>
+     
     </div>
   );
 };

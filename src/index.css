@@ -2,118 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Base Theme (Light only) */
 @layer base {
   :root {
-    /* Robotics Theme - Dark tech aesthetic */
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Robotics Theme - Light dashboard aesthetic */
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 5% 10%; /* Very dark gray */
 
-    --card: 217 32.6% 17.5%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 5% 10%;
 
-    --popover: 217 32.6% 17.5%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5% 10%;
 
     --primary: 180 70% 60%;  /* Cyan from dashboard */
-    --primary-foreground: 222 84% 4.9%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 90% 60%; /* Orange from dashboard */
-    --secondary-foreground: 222 84% 4.9%;
+    --secondary: 25 90% 60%; /* Orange */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 20% 95%; /* Light muted gray */
+    --muted-foreground: 215 20% 45%;
 
-    --accent: 150 60% 50%;   /* Green from dashboard */
-    --accent-foreground: 222 84% 4.9%;
+    --accent: 150 60% 50%; /* Green */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 350 70% 60%; /* Pink/Red from dashboard */
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 350 70% 60%; /* Pink/Red */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 32.6% 17.5%;
-    --input: 217 32.6% 17.5%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 189 100% 50%;
 
     /* Custom dashboard theme colors */
-    --cyber-blue: 180 70% 60%;      /* Main cyan */
-    --cyber-blue-glow: 180 70% 80%; /* Lighter cyan */
-    --dashboard-orange: 25 90% 60%;  /* Dashboard orange */
-    --dashboard-green: 150 60% 50%;  /* Dashboard green */
-    --dashboard-purple: 270 60% 60%; /* Dashboard purple */
-    --dashboard-pink: 350 70% 60%;   /* Dashboard pink */
-    --dashboard-light-blue: 200 70% 60%; /* Light blue variant */
-    --tech-dark: 222 84% 4.9%;
-    --tech-darker: 217 32.6% 12%;
-    --tech-light: 217 32.6% 17.5%;
-    
-    /* Dashboard Inspired Gradients */
+    --cyber-blue: 180 70% 60%;
+    --cyber-blue-glow: 180 70% 80%;
+    --dashboard-orange: 25 90% 60%;
+    --dashboard-green: 150 60% 50%;
+    --dashboard-purple: 270 60% 60%;
+    --dashboard-pink: 350 70% 60%;
+    --dashboard-light-blue: 200 70% 60%;
+
+    --tech-dark: 217 33% 15%;
+    --tech-darker: 217 33% 12%;
+    --tech-light: 217 33% 17%;
+
+    /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--cyber-blue)), hsl(var(--cyber-blue-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--dashboard-orange)), hsl(25 90% 80%));
     --gradient-accent: linear-gradient(135deg, hsl(var(--dashboard-green)), hsl(150 60% 70%));
     --gradient-purple: linear-gradient(135deg, hsl(var(--dashboard-purple)), hsl(270 60% 80%));
     --gradient-dark: linear-gradient(135deg, hsl(var(--tech-dark)), hsl(var(--tech-darker)));
     --gradient-tech: linear-gradient(45deg, transparent, hsl(var(--cyber-blue) / 0.1), transparent);
-    
-    /* Shadows & Effects */
+
+    /* Shadows */
     --glow-primary: 0 0 30px hsl(var(--cyber-blue) / 0.5);
     --glow-soft: 0 0 20px hsl(var(--cyber-blue) / 0.3);
     --shadow-tech: 0 10px 40px hsl(var(--tech-darker) / 0.8);
 
     --radius: 0.5rem;
 
+    /* Sidebar */
     --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 217 91% 60%;
   }
 
-  .dark {
-    /* Updated dark theme to match dashboard palette */
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 217 32.6% 17.5%;
-    --card-foreground: 210 40% 98%;
-    --popover: 217 32.6% 17.5%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 180 70% 60%;  /* Cyan from dashboard */
-    --primary-foreground: 222 84% 4.9%;
-    --secondary: 25 90% 60%; /* Orange from dashboard */
-    --secondary-foreground: 222 84% 4.9%;
-    --muted: 217 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 150 60% 50%;   /* Green from dashboard */
-    --accent-foreground: 222 84% 4.9%;
-    --destructive: 350 70% 60%; /* Pink/Red from dashboard */
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 32.6% 17.5%;
-    --input: 217 32.6% 17.5%;
-    --ring: 189 100% 50%;
-    --sidebar-background: 222 84% 4.9%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 180 70% 60%;  /* Cyan from dashboard */
-    --sidebar-primary-foreground: 222 84% 4.9%;
-    --sidebar-accent: 217 32.6% 17.5%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 32.6% 17.5%;
-    --sidebar-ring: 180 70% 60%;
-  }
-}
-
-@layer base {
   * {
     @apply border-border;
   }
@@ -121,129 +80,4 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@layer components {
-  /* Custom tech animations and effects */
-  .circuit-bg {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .circuit-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gradient-tech);
-    opacity: 0.1;
-    animation: tech-pulse 4s ease-in-out infinite;
-  }
-  
-  .tech-glow {
-    box-shadow: var(--glow-soft);
-    transition: all 0.3s ease;
-  }
-  
-  .tech-glow:hover {
-    box-shadow: var(--glow-primary);
-    transform: translateY(-2px);
-  }
-  
-  .count-up {
-    font-variant-numeric: tabular-nums;
-  }
-  
-  .hero-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}
-
-@keyframes tech-pulse {
-  0%, 100% { opacity: 0.1; transform: scale(1); }
-  50% { opacity: 0.3; transform: scale(1.02); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animation classes */
-.animate-slide-in-right {
-  animation: slide-in-right 0.8s ease-out;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 0.8s ease-out;
-}
-
-.animate-slide-up {
-  animation: slide-up 0.6s ease-out;
-}
-
-.animate-fade-in-delayed {
-  animation: fade-in-up 0.8s ease-out 0.3s both;
-}
-
-/* Animation delays */
-.animation-delay-200 {
-  animation-delay: 200ms;
-}
-
-.animation-delay-400 {
-  animation-delay: 400ms;
-}
-
-.animation-delay-600 {
-  animation-delay: 600ms;
 }

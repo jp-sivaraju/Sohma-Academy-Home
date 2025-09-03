@@ -94,7 +94,7 @@ const InnovationMela = () => {
           <div className="relative">
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Innovation Mela</h1>
+              <h1 className="text-4xl md:text-5xl text-primary font-bold mb-6 animate-fade-in">Innovation Mela</h1>
               <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-delayed">
                 Showcasing innovative robotics projects developed by our students across various domains
               </p>
