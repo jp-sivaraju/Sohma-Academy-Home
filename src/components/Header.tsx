@@ -55,41 +55,30 @@ const Header = () => {
             </Link>
 
             {/* Activities Dropdown (Desktop - hover only) */}
-            <div
-              className="relative"
-              onMouseEnter={() => setActiveDropdown("activities")}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              <button
-                className={`text-sm font-medium transition-colors hover:text-primary flex items-center space-x-1 ${
-                  location.pathname.startsWith("/activities")
-                    ? "text-primary"
-                    : "text-foreground"
-                }`}
-              >
-                <span>Activities</span>
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform ${
-                    activeDropdown === "activities" ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+           <div className="relative group">
+  <button
+    className={`text-sm font-medium transition-colors hover:text-primary flex items-center space-x-1 ${
+      location.pathname.startsWith("/activities") ? "text-primary" : "text-foreground"
+    }`}
+  >
+    <span>Activities</span>
+    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+  </button>
 
-              {activeDropdown === "activities" && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-background/95 backdrop-blur border border-border rounded-md shadow-lg animate-fade-in z-50">
-                  {activitiesSubmenu.map((item) => (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      className="block px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent/80 transition-colors"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+  {/* Dropdown opens on hover via Tailwind group-hover */}
+  <div className="absolute top-full left-0 mt-2 hidden w-48 bg-background/95 backdrop-blur border border-border rounded-md shadow-lg group-hover:block z-50">
+    {activitiesSubmenu.map((item) => (
+      <Link
+        key={item.path}
+        to={item.path}
+        className="block px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent/80 transition-colors"
+      >
+        {item.name}
+      </Link>
+    ))}
+  </div>
+</div>
+
 
             <Link
               to="/exhibitions-events"
