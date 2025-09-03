@@ -62,15 +62,23 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Custom robotics theme colors
+				// Custom dashboard theme colors
 				'cyber-blue': 'hsl(var(--cyber-blue))',
 				'cyber-blue-glow': 'hsl(var(--cyber-blue-glow))',
+				'dashboard-orange': 'hsl(var(--dashboard-orange))',
+				'dashboard-green': 'hsl(var(--dashboard-green))',
+				'dashboard-purple': 'hsl(var(--dashboard-purple))',
+				'dashboard-pink': 'hsl(var(--dashboard-pink))',
+				'dashboard-light-blue': 'hsl(var(--dashboard-light-blue))',
 				'tech-dark': 'hsl(var(--tech-dark))',
 				'tech-darker': 'hsl(var(--tech-darker))',
 				'tech-light': 'hsl(var(--tech-light))'
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-purple': 'var(--gradient-purple)',
 				'gradient-dark': 'var(--gradient-dark)',
 				'gradient-tech': 'var(--gradient-tech)'
 			},

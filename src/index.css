@@ -18,34 +18,42 @@ All colors MUST be HSL.
     --popover: 217 32.6% 17.5%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 189 100% 50%;
+    --primary: 180 70% 60%;  /* Cyan from dashboard */
     --primary-foreground: 222 84% 4.9%;
 
-    --secondary: 217 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 25 90% 60%; /* Orange from dashboard */
+    --secondary-foreground: 222 84% 4.9%;
 
     --muted: 217 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 189 100% 50%;
+    --accent: 150 60% 50%;   /* Green from dashboard */
     --accent-foreground: 222 84% 4.9%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 350 70% 60%; /* Pink/Red from dashboard */
     --destructive-foreground: 210 40% 98%;
 
     --border: 217 32.6% 17.5%;
     --input: 217 32.6% 17.5%;
     --ring: 189 100% 50%;
 
-    /* Custom robotics design tokens */
-    --cyber-blue: 189 100% 50%;
-    --cyber-blue-glow: 189 100% 60%;
+    /* Custom dashboard theme colors */
+    --cyber-blue: 180 70% 60%;      /* Main cyan */
+    --cyber-blue-glow: 180 70% 80%; /* Lighter cyan */
+    --dashboard-orange: 25 90% 60%;  /* Dashboard orange */
+    --dashboard-green: 150 60% 50%;  /* Dashboard green */
+    --dashboard-purple: 270 60% 60%; /* Dashboard purple */
+    --dashboard-pink: 350 70% 60%;   /* Dashboard pink */
+    --dashboard-light-blue: 200 70% 60%; /* Light blue variant */
     --tech-dark: 222 84% 4.9%;
     --tech-darker: 217 32.6% 12%;
     --tech-light: 217 32.6% 17.5%;
     
-    /* Gradients */
+    /* Dashboard Inspired Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--cyber-blue)), hsl(var(--cyber-blue-glow)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--dashboard-orange)), hsl(25 90% 80%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--dashboard-green)), hsl(150 60% 70%));
+    --gradient-purple: linear-gradient(135deg, hsl(var(--dashboard-purple)), hsl(270 60% 80%));
     --gradient-dark: linear-gradient(135deg, hsl(var(--tech-dark)), hsl(var(--tech-darker)));
     --gradient-tech: linear-gradient(45deg, transparent, hsl(var(--cyber-blue) / 0.1), transparent);
     
