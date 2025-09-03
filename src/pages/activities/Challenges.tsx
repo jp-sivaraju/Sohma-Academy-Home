@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const Challenges = () => {
-  const [selectedYear, setSelectedYear] = useState("2024-25");
+  const [selectedYear, setSelectedYear] = useState<string>("2024-25");
 
   const years = ["2024-25", "2023-24", "2022-23"];
 
-  const challengesData = {
+  const challengesData: Record<string, { counter: string; challenges: any[] }> = {
     "2024-25": {
       counter: "ROBOTICS CLUB ACTIVITY CHALLENGES COUNTER\nTrack our robotics club activities conducted at some of the government high schools in 2024 - 2025 academic year\n🥉 Bronze - ✅ 353 | 🥈 Silver - ✅ 319| 🥇 Gold - ✅ 246| 🏆 Platinum - ✅ 159 | 💎 Diamond - ✅ 100 | 🎯 Masters - ✅ 86|\n🎯 Grand Masters - ✅ 67",
       challenges: [
@@ -72,10 +72,29 @@ const Challenges = () => {
           level: "Gold Completed"
         }
       ]
+    },
+    "2022-23": {
+      counter: "ROBOTICS CLUB ACTIVITY CHALLENGES COUNTER 2022-23\nArchived challenges from 2022-23 academic year",
+      challenges: [
+        {
+          schoolId: "1001",
+          name: "Historical School Data",
+          bronze: 4.2,
+          silver: 5.5,
+          gold: 7.1,
+          platinum: "-",
+          diamond: "-",
+          masters: "-",
+          grandMasters: "-",
+          total: 25,
+          level: "Silver Completed"
+        }
+      ]
     }
   };
 
-  const currentData = challengesData[selectedYear as keyof typeof challengesData];
+  // Get current data with fallback
+  const currentData = challengesData[selectedYear] || challengesData["2024-25"];
 
   return (
     <div className="min-h-screen bg-background">
