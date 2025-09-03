@@ -77,12 +77,13 @@ const Header = () => {
               </button>
               
               {activeDropdown === "activities" && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-background border border-border rounded-md shadow-lg animate-fade-in">
+                <div className="absolute top-full left-0 mt-2 w-48 bg-background/95 backdrop-blur border border-border rounded-md shadow-lg animate-fade-in z-50">
                   {activitiesSubmenu.map((item) => (
                     <Link
                       key={item.path}
                       to={item.path}
-                      className="block px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent transition-colors"
+                      className="block px-4 py-2 text-sm text-foreground hover:text-primary hover:bg-accent/80 transition-colors"
+                      onClick={() => setActiveDropdown(null)}
                     >
                       {item.name}
                     </Link>

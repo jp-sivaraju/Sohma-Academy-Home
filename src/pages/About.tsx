@@ -148,12 +148,12 @@ const About = () => {
               isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
             }`}
           >
-            <Card className="p-8 tech-glow">
+            <Card className="p-8 tech-glow hover:scale-105 transition-all duration-500 hover:shadow-2xl">
               <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                   <span className="text-2xl">🚀</span>
                 </div>
-                <h3 className="text-xl font-bold">Mission</h3>
+                <h3 className="text-xl font-bold animate-fade-in">Mission</h3>
               </div>
               
               <p className="text-center text-lg text-muted-foreground mb-8">
@@ -189,6 +189,67 @@ const About = () => {
                 </p>
               </div>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h3 className="text-sm font-medium text-primary mb-4 tracking-wider animate-fade-in">
+              OUR LEADERSHIP
+            </h3>
+            <h2 className="text-3xl md:text-4xl font-bold animate-fade-in animation-delay-200">
+              Awesome People Behind Us
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-6 max-w-6xl mx-auto">
+            {[
+              { name: "Dr. Rajesh Kumar", role: "Founder & CEO", image: "/placeholder.svg" },
+              { name: "Priya Sharma", role: "Academic Director", image: "/placeholder.svg" },
+              { name: "Anjali Reddy", role: "Program Manager", image: "/placeholder.svg" },
+              { name: "Vikram Singh", role: "Technical Lead", image: "/placeholder.svg" },
+              { name: "Meera Patel", role: "Training Coordinator", image: "/placeholder.svg" },
+              { name: "Arjun Mehta", role: "Innovation Manager", image: "/placeholder.svg" },
+              { name: "Kavitha Rao", role: "Operations Head", image: "/placeholder.svg" },
+              { name: "Rohit Agarwal", role: "Research Director", image: "/placeholder.svg" },
+              { name: "Deepika Nair", role: "Quality Assurance", image: "/placeholder.svg" },
+              { name: "Suresh Gupta", role: "Field Coordinator", image: "/placeholder.svg" },
+              { name: "Nisha Joshi", role: "Student Relations", image: "/placeholder.svg" },
+              { name: "Kiran Kumar", role: "Tech Support", image: "/placeholder.svg" },
+              { name: "Pooja Verma", role: "Content Developer", image: "/placeholder.svg" },
+              { name: "Rahul Krishnan", role: "Partnership Manager", image: "/placeholder.svg" },
+              { name: "Sneha Iyer", role: "Marketing Head", image: "/placeholder.svg" },
+              { name: "Amit Khanna", role: "Finance Manager", image: "/placeholder.svg" },
+              { name: "Divya Pandey", role: "HR Manager", image: "/placeholder.svg" },
+              { name: "Harsh Agarwal", role: "IT Administrator", image: "/placeholder.svg" },
+              { name: "Ravi Shankar", role: "Regional Manager", image: "/placeholder.svg" },
+              { name: "Swati Singh", role: "Curriculum Designer", image: "/placeholder.svg" },
+              { name: "Manoj Tiwari", role: "Equipment Manager", image: "/placeholder.svg" },
+              { name: "Neha Kapoor", role: "Communications Lead", image: "/placeholder.svg" },
+              { name: "Sandeep Roy", role: "Data Analyst", image: "/placeholder.svg" },
+              { name: "Preeti Agarwal", role: "Event Coordinator", image: "/placeholder.svg" }
+            ].map((member, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-110 animate-fade-in"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full aspect-square object-cover rounded-lg border-2 border-border group-hover:border-primary transition-colors duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+                  <div className="absolute bottom-2 left-2 right-2 text-white text-center">
+                    <p className="text-xs font-medium truncate">{member.name}</p>
+                    <p className="text-xs opacity-80 truncate">{member.role}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

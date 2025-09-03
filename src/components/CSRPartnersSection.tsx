@@ -27,18 +27,19 @@ const CSRPartnersSection = () => {
       <div className="container mx-auto px-4">
         {/* CSR Partners */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12">Our CSR Partners</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 animate-fade-in">Our CSR Partners</h2>
           
           {/* Partners Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 mb-16">
             {partners.map((partner, index) => (
-              <Card
+              <div
                 key={index}
-                className="p-4 hover:scale-105 transition-transform tech-glow flex flex-col items-center justify-center min-h-[100px]"
+                className="p-4 hover:scale-105 transition-all duration-300 tech-glow flex flex-col items-center justify-center min-h-[100px] bg-card rounded-lg border border-border hover:border-primary animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-2xl mb-2">{partner.logo}</div>
+                <div className="text-2xl mb-2 transition-transform duration-300 hover:scale-110">{partner.logo}</div>
                 <span className="text-sm font-medium text-center">{partner.name}</span>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
@@ -46,9 +47,9 @@ const CSRPartnersSection = () => {
         {/* Contact Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-bold mb-8">Want to work with us?</h3>
-            <p className="text-muted-foreground mb-8">
+          <div className="animate-slide-in-left">
+            <h3 className="text-2xl font-bold mb-8 animate-fade-in">Want to work with us?</h3>
+            <p className="text-muted-foreground mb-8 animate-fade-in animation-delay-300">
               You can reach out via the below mentioned details
             </p>
             
@@ -88,7 +89,7 @@ const CSRPartnersSection = () => {
           </div>
 
           {/* Contact Form Preview */}
-          <Card className="p-8 tech-glow">
+          <Card className="p-8 tech-glow animate-slide-in-right">
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>

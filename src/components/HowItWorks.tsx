@@ -105,15 +105,15 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <Card
               key={index}
-              className={`p-6 text-center tech-glow transition-all duration-300 hover:scale-105 ${
+              className={`p-6 text-center tech-glow transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer group ${
                 step.active ? 'ring-2 ring-primary' : ''
               }`}
             >
-              <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-lg">
+              <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground font-bold text-lg group-hover:scale-110 transition-transform duration-300">
                 {step.step}
               </div>
-              <h3 className="font-semibold mb-3 text-sm">{step.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">
+              <h3 className="font-semibold mb-3 text-sm group-hover:text-primary transition-colors">{step.title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
                 {step.description}
               </p>
             </Card>
