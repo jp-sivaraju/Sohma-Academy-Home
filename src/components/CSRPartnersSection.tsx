@@ -54,7 +54,7 @@ const CSRPartnersSection = () => {
             
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center">
                   <Mail className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -64,51 +64,64 @@ const CSRPartnersSection = () => {
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center">
                   <Phone className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium">Call us at</p>
-                  <p className="text-primary">+91 90008 43268</p>
+                  <p className="text-primary">+91 80996 43298</p>
                 </div>
               </div>
               
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <p className="font-medium">Soham Academy</p>
                   <p className="text-muted-foreground">
-                    Ameerpet, Hyderabad, Telangana
+                    Bagh Amberpet, Hyderabad, Telangana
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Contact Form Preview */}
           <Card className="p-8 tech-glow">
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
-                  <Input placeholder="Your name" />
+                  <Input 
+                    placeholder="Your name" 
+                    className="bg-tech-light border-border focus:border-primary transition-colors"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Phone</label>
-                  <Input placeholder="Your phone number" />
+                  <Input 
+                    placeholder="Your phone number" 
+                    className="bg-tech-light border-border focus:border-primary transition-colors"
+                  />
                 </div>
               </div>
               
               <div>
                 <label className="block text-sm font-medium mb-2">Email</label>
-                <Input type="email" placeholder="Your email address" />
+                <Input 
+                  type="email" 
+                  placeholder="Your email address" 
+                  className="bg-tech-light border-border focus:border-primary transition-colors"
+                />
               </div>
               
               <div>
                 <label className="block text-sm font-medium mb-2">Subject</label>
-                <Input placeholder="Subject of your inquiry" />
+                <Input 
+                  placeholder="Subject of your inquiry" 
+                  className="bg-tech-light border-border focus:border-primary transition-colors"
+                />
               </div>
               
               <div>
@@ -116,6 +129,7 @@ const CSRPartnersSection = () => {
                 <Textarea 
                   placeholder="Tell us about your requirements..."
                   rows={5}
+                  className="bg-tech-light border-border focus:border-primary transition-colors resize-none"
                 />
               </div>
               
