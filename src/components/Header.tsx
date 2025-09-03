@@ -8,22 +8,10 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const handleDropdownToggle = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
-
-  const handleMouseEnter = (dropdown: string) => {
-    setActiveDropdown(dropdown);
-  };
-
-  const handleMouseLeave = () => {
-    setActiveDropdown(null);
-  };
-
   const activitiesSubmenu = [
     { name: "Training", path: "/activities/training" },
     { name: "Challenges", path: "/activities/challenges" },
-    { name: "Innovation Mela", path: "/activities/innovation-mela" }
+    { name: "Innovation Mela", path: "/activities/innovation-mela" },
   ];
 
   return (
@@ -36,8 +24,12 @@ const Header = () => {
               <span className="text-background font-bold text-lg">R</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-none">Robotics In Academics</span>
-              <span className="text-xs text-muted-foreground leading-none">Soham Academy of Human Excellence</span>
+              <span className="font-bold text-lg leading-none">
+                Robotics In Academics
+              </span>
+              <span className="text-xs text-muted-foreground leading-none">
+                Soham Academy of Human Excellence
+              </span>
             </div>
           </Link>
 
@@ -54,28 +46,35 @@ const Header = () => {
             <Link
               to="/about"
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === "/about" ? "text-primary" : "text-foreground"
+                location.pathname === "/about"
+                  ? "text-primary"
+                  : "text-foreground"
               }`}
             >
               About Us
             </Link>
-            
-            {/* Activities Dropdown */}
-            <div 
+
+            {/* Activities Dropdown (Desktop - hover only) */}
+            <div
               className="relative"
-              onMouseEnter={() => handleMouseEnter("activities")}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => setActiveDropdown("activities")}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
                 className={`text-sm font-medium transition-colors hover:text-primary flex items-center space-x-1 ${
-                  location.pathname.startsWith("/activities") ? "text-primary" : "text-foreground"
+                  location.pathname.startsWith("/activities")
+                    ? "text-primary"
+                    : "text-foreground"
                 }`}
-                onClick={() => handleDropdownToggle("activities")}
               >
                 <span>Activities</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "activities" ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${
+                    activeDropdown === "activities" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-              
+
               {activeDropdown === "activities" && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-background/95 backdrop-blur border border-border rounded-md shadow-lg animate-fade-in z-50">
                   {activitiesSubmenu.map((item) => (
@@ -95,7 +94,9 @@ const Header = () => {
             <Link
               to="/exhibitions-events"
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === "/exhibitions-events" ? "text-primary" : "text-foreground"
+                location.pathname === "/exhibitions-events"
+                  ? "text-primary"
+                  : "text-foreground"
               }`}
             >
               Exhibitions & Events
@@ -103,7 +104,9 @@ const Header = () => {
             <Link
               to="/reports"
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === "/reports" ? "text-primary" : "text-foreground"
+                location.pathname === "/reports"
+                  ? "text-primary"
+                  : "text-foreground"
               }`}
             >
               Reports
@@ -111,7 +114,9 @@ const Header = () => {
             <Link
               to="/ftc"
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === "/ftc" ? "text-primary" : "text-foreground"
+                location.pathname === "/ftc"
+                  ? "text-primary"
+                  : "text-foreground"
               }`}
             >
               FTC
@@ -119,7 +124,9 @@ const Header = () => {
             <Link
               to="/contact"
               className={`text-sm font-medium transition-colors hover:text-primary ${
-                location.pathname === "/contact" ? "text-primary" : "text-foreground"
+                location.pathname === "/contact"
+                  ? "text-primary"
+                  : "text-foreground"
               }`}
             >
               Contact
@@ -133,7 +140,11 @@ const Header = () => {
             className="lg:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </Button>
         </div>
 
@@ -155,15 +166,27 @@ const Header = () => {
               >
                 About Us
               </Link>
-              
-              {/* Mobile Activities Submenu */}
+
+              {/* Mobile Activities Submenu (click toggle) */}
               <div>
                 <button
                   className="text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center space-x-1 w-full text-left"
-                  onClick={() => handleDropdownToggle("mobile-activities")}
+                  onClick={() =>
+                    setActiveDropdown(
+                      activeDropdown === "mobile-activities"
+                        ? null
+                        : "mobile-activities"
+                    )
+                  }
                 >
                   <span>Activities</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "mobile-activities" ? "rotate-180" : ""}`} />
+                  <ChevronDown
+                    className={`w-4 h-4 transition-transform ${
+                      activeDropdown === "mobile-activities"
+                        ? "rotate-180"
+                        : ""
+                    }`}
+                  />
                 </button>
                 {activeDropdown === "mobile-activities" && (
                   <div className="ml-4 mt-2 space-y-2">
