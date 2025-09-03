@@ -14,7 +14,11 @@ const Training = () => {
   const years = ["2024-25", "2023-24", "2022-23"];
   const tabs = ["Schools", "Retraining", "Colleges"];
 
-  const trainingData = {
+  const trainingData: Record<string, {
+    Schools: { counter: string; schools: any[] };
+    Retraining: { counter: string; schools: any[] };
+    Colleges: { counter: string; schools: any[] };
+  }> = {
     "2024-25": {
       Schools: {
         counter: "ROBOTICS 2024-25 TRAINING COUNTER: STUDENTS - 6351 | GIRLS - 3395 | BOYS - 2956 | SCHOOLS - 47",
@@ -76,11 +80,100 @@ const Training = () => {
           }
         ]
       }
+    },
+    "2023-24": {
+      Schools: {
+        counter: "ROBOTICS 2023-24 TRAINING COUNTER: STUDENTS - 5200 | GIRLS - 2800 | BOYS - 2400 | SCHOOLS - 38",
+        schools: [
+          {
+            id: "1301",
+            name: "Previous Year School Program",
+            location: "Hyderabad",
+            date: "Completed",
+            students: { girls: 50, boys: 60, total: 110 },
+            status: "Completed",
+            image: "/api/placeholder/150/100"
+          }
+        ]
+      },
+      Retraining: {
+        counter: "ROBOTICS 2023-24 RETRAINING COUNTER: STUDENTS - 980 | SCHOOLS - 12",
+        schools: [
+          {
+            id: "R002",
+            name: "Previous Retraining Program",
+            location: "Hyderabad", 
+            date: "Completed",
+            students: { girls: 40, boys: 50, total: 90 },
+            status: "Completed",
+            image: "/api/placeholder/150/100"
+          }
+        ]
+      },
+      Colleges: {
+        counter: "ROBOTICS 2023-24 COLLEGE TRAINING COUNTER: STUDENTS - 750 | COLLEGES - 6",
+        schools: [
+          {
+            id: "C002",
+            name: "Previous College Program",
+            location: "Hyderabad",
+            date: "Completed",
+            students: { girls: 120, boys: 180, total: 300 },
+            status: "Completed",
+            image: "/api/placeholder/150/100"
+          }
+        ]
+      }
+    },
+    "2022-23": {
+      Schools: {
+        counter: "ROBOTICS 2022-23 TRAINING COUNTER: STUDENTS - 4500 | GIRLS - 2200 | BOYS - 2300 | SCHOOLS - 30",
+        schools: [
+          {
+            id: "1201",
+            name: "Legacy School Program",
+            location: "Hyderabad",
+            date: "Completed",
+            students: { girls: 45, boys: 55, total: 100 },
+            status: "Completed",
+            image: "/api/placeholder/150/100"
+          }
+        ]
+      },
+      Retraining: {
+        counter: "ROBOTICS 2022-23 RETRAINING COUNTER: STUDENTS - 800 | SCHOOLS - 10",
+        schools: [
+          {
+            id: "R003",
+            name: "Legacy Retraining Program",
+            location: "Hyderabad",
+            date: "Completed", 
+            students: { girls: 35, boys: 45, total: 80 },
+            status: "Completed",
+            image: "/api/placeholder/150/100"
+          }
+        ]
+      },
+      Colleges: {
+        counter: "ROBOTICS 2022-23 COLLEGE TRAINING COUNTER: STUDENTS - 600 | COLLEGES - 4",
+        schools: [
+          {
+            id: "C003",
+            name: "Legacy College Program",
+            location: "Hyderabad",
+            date: "Completed",
+            students: { girls: 100, boys: 150, total: 250 },
+            status: "Completed",
+            image: "/api/placeholder/150/100"
+          }
+        ]
+      }
     }
   };
 
-  const currentData = trainingData[selectedYear as keyof typeof trainingData];
-  const currentTabData = currentData[activeTab as keyof typeof currentData];
+  // Get current data with fallback
+  const currentData = trainingData[selectedYear] || trainingData["2024-25"];
+  const currentTabData = currentData[activeTab as keyof typeof currentData] || currentData.Schools;
 
   return (
     <div className="min-h-screen bg-background">
