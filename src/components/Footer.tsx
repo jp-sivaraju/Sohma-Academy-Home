@@ -20,7 +20,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               Copyright © Soham Academy of Human Excellence | Designed & Developed by{" "}
               <Link to="/" className="text-primary hover:underline">
-                Western Devings
+               Srinishtha Technologies LLP
               </Link>
             </p>
           </div>
