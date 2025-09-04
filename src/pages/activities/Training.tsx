@@ -185,7 +185,7 @@ const Training = () => {
           <div className="relative">
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6  text-primary animate-fade-in">Training Programs</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6  text-orange-500 animate-fade-in">Training Programs</h1>
               <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-delayed">
                 Track our robotics program conducted at some of the government high schools and colleges
               </p>

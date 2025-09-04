@@ -70,7 +70,7 @@ const Reports = () => {
           <div className="relative">
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl  text-primary font-bold mb-6 animate-fade-in">Reports & Publications</h1>
+              <h1 className="text-4xl md:text-5xl  text-orange-500 font-bold mb-6 animate-fade-in">Reports & Publications</h1>
               <p className="text-lg text-muted-foreground max-w-4xl animate-fade-in-delayed">
                 Explore our comprehensive collection of reports, publications, and documentation showcasing our journey, 
                 achievements, and impact in robotics education across various schools and institutions.

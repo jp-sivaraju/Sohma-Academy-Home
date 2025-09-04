@@ -18,7 +18,7 @@ const Contact = () => {
             {/* Cyan accent line - animated from bottom to top */}
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-primary animate-fade-in">Contact</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-orange-500 animate-fade-in">Contact</h1>
               <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-delayed">
                 Would you like to have a similar program introduced for your school or 
                 institution's children? Then don't hesitate to reach us out

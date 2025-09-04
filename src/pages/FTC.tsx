@@ -38,7 +38,7 @@ const FTC = () => {
           <div className="relative">
             <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
             <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl  text-primary font-bold mb-6 animate-fade-in">First Tech Challenge (FTC)</h1>
+              <h1 className="text-4xl md:text-5xl  text-orange-500 font-bold mb-6 animate-fade-in">First Tech Challenge (FTC)</h1>
               <p className="text-lg text-muted-foreground max-w-4xl animate-fade-in-delayed">
                 We, Soham Academy (#24067) have made our debut in the First Tech Challenge (FTC), joining a vibrant community of innovators from
                 India, Kazakhstan and Sri Lanka! This was our first-ever international Robotics Competition participation. Our Robotics Club students
