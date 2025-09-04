@@ -79,11 +79,11 @@ const About = () => {
             <h2 className="text-2xl font-bold mb-4 hero-text">That's Why</h2>
             <p className="text-lg text-white max-w-2xl mx-auto">
               We have put in every effort to
-              <br />
+              
               make it easy to follow and
-              <br />
+            
               execute Robotics projects in
-              <br />
+            
               schools.
             </p>
           </div>
@@ -92,10 +92,11 @@ const About = () => {
 
       {/* History Section */}
       <section className="py-10">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center pb-12">
             <div>
-              <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider">
+              <h3 className="text-3xl font-medium text-[#FAAB34] mb-4 tracking-wider">
                 HISTORY
               </h3>
               <h2 className="text-3xl font-bold mb-6">
@@ -144,109 +145,116 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 circuit-bg">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider">
-              ABOUT SOHAM ACADEMY
-            </h3>
+  <section className="py-2 circuit-bg">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-8"> {/* reduced from mb-16 to mb-8 */}
+      <h3 className="text-3xl font-medium text-primary mb-2 tracking-wider">
+        ABOUT SOHAM ACADEMY
+      </h3>
+    </div>
+
+    <div
+      ref={missionRef}
+      className={`max-w-5xl mx-auto transition-all duration-1000 px-2 sm:px-4 ${
+        isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
+      }`}
+    >
+      <Card className="px-4 sm:px-6 md:px-10 py-8 sm:py-10 bg-background border border-border shadow-md hover:shadow-xl transition-shadow duration-300 rounded-xl space-y-10">
+        {/* Icon + Title */}
+        <div className="text-center space-y-3">
+          <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center mx-auto animate-float shadow-md">
+            <span className="text-2xl">🚀</span>
           </div>
-          
-          <div
-            ref={missionRef}
-            className={`max-w-4xl mx-auto transition-all duration-1000 ${
-              isVisible ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'
-            }`}
-          >
-            <Card className="p-8 tech-glow hover:scale-105 transition-all duration-500 hover:shadow-2xl">
-              <div className="text-center mb-8">
-                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
-                  <span className="text-2xl">🚀</span>
-                </div>
-                <h3 className="text-xl font-bold animate-fade-in">Mission</h3>
+          <h3 className="text-2xl font-bold text-primary animate-fade-in">Our Mission</h3>
+        </div>
+
+        {/* Mission Statement */}
+        <p className="text-center text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          It is our mission to complement the efforts of the schools in doing what they are unable to do and in teaching what they 
+          are not equipped to teach.
+        </p>
+
+        {/* Program List */}
+        <div className="space-y-6">
+          <h4 className="text-center text-lg font-semibold text-foreground">Our Programs Include:</h4>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 max-w-5xl mx-auto">
+            {programs.map((program, index) => (
+              <div key={index} className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-primary rounded-full" />
+                <span className="text-sm md:text-base text-foreground">{program}</span>
               </div>
-              
-              <p className="text-center text-lg text-muted-foreground mb-8">
-                It is our mission to complement the efforts of the schools in doing what they are unable to do and in teaching what they 
-                are not equipped to teach.
-              </p>
-              
-              <div className="mb-8">
-                <h4 className="font-semibold mb-4">A growing list of our programs now include:</h4>
-                <div className="grid md:grid-cols-2 gap-2">
-                  {programs.map((program, index) => (
-                    <div key={index} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-primary rounded-full"></div>
-                      <span className="text-sm">{program}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <p className="text-center text-muted-foreground">
-                Across all programs being rolled out, children are the center and the drivers of our program. "We do not change anything 
-                the most of our program - we unlock thousands of children in giving beneficial from our programs.
-              </p>
-              
-              <div className="mt-8 text-center">
-                <p className="text-sm text-muted-foreground">
-                  Our organisation has both <span className="font-semibold">12A</span> and 
-                  <span className="font-semibold"> 80G approval</span>.
-                </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  Our organisation also has both <span className="font-semibold">CSR</span> and 
-                  <span className="font-semibold"> CSO approval</span>.
-                </p>
-              </div>
-            </Card>
+            ))}
           </div>
         </div>
-      </section>
+
+        {/* Program Impact */}
+        <p className="text-center text-muted-foreground text-sm md:text-base max-w-4xl mx-auto leading-relaxed">
+          Across all programs being rolled out, children are at the center and the driving force. We unlock the potential of thousands of
+          children by giving them access to high-impact educational experiences.
+        </p>
+
+        {/* Approval Info */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-muted-foreground mt-4">
+          <div className="bg-muted px-4 py-1 rounded-full font-semibold">
+            ✅ 12A & 80G Approved
+          </div>
+          <div className="bg-muted px-4 py-1 rounded-full font-semibold">
+            🤝 CSR Certified
+          </div>
+          <div className="bg-muted px-4 py-1 rounded-full font-semibold">
+            🌐 CSO Registered
+          </div>
+        </div>
+      </Card>
+    </div>
+  </div>
+</section>
+
 
       {/* Team Section */}
-      <section className="">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider animate-fade-in">
-              OUR LEADERSHIP
-            </h3>
-            <h2 className="text-3xl md:text-4xl font-bold animate-fade-in animation-delay-200">
-              Awesome People Behind Us
-            </h2>
-          </div>
-          
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-  {[
-    { name: "Komaragiri Sahadev", role: "Founder & Director, Soham Academy of Human Excellence", image: pro1 },
-    { name: "B Jeshwanth", role: "Program Coordinator", image: pro2 },
-    { name: "Ganitha", role: "Program Coordinator", image: pro3 },
-    { name: "Y Anusha", role: "Core Team Member", image: pro4 },
-    { name: "Spandana", role: "Core Team Member", image: pro5 },
-    { name: "Rahul Goud", role: "Core Team Member", image: pro6 },
-    { name: "Ramya", role: "Core Team Member", image: pro7 },
-  ].map((member, index) => (
-    <div
-      key={index}
-      className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 animate-fade-in"
-      style={{ animationDelay: `${index * 50}ms` }}
-    >
-      <img
-        src={member.image}
-        alt={member.name}
-        className="w-full h-80 object-cover rounded-lg border-2 border-border group-hover:border-primary transition-colors duration-300"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
-        <div className="absolute bottom-3 left-3 right-3 text-white text-center">
-          <p className="text-sm font-semibold">{member.name}</p>
-          <p className="text-xs opacity-80">{member.role}</p>
-        </div>
-      </div>
+    <section className="py-2">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h3 className="text-2xl font-medium text-primary mb-4 tracking-wider animate-fade-in">
+        OUR LEADERSHIP
+      </h3>
+      <h2 className="text-3xl md:text-4xl font-bold animate-fade-in animation-delay-200">
+        Awesome People Behind Us
+      </h2>
     </div>
-  ))}
-</div>
 
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+      {[
+        { name: "Komaragiri Sahadev", role: "Founder & Director, Soham Academy of Human Excellence", image: pro1 },
+        { name: "B Jeshwanth", role: "Program Coordinator", image: pro2 },
+        { name: "Ganitha", role: "Program Coordinator", image: pro3 },
+        { name: "Y Anusha", role: "Core Team Member", image: pro4 },
+        { name: "Spandana", role: "Core Team Member", image: pro5 },
+        { name: "Rahul Goud", role: "Core Team Member", image: pro6 },
+        { name: "Ramya", role: "Core Team Member", image: pro7 },
+      ].map((member, index) => (
+        <div
+          key={index}
+          className="group relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-105 animate-fade-in"
+          style={{ animationDelay: `${index * 50}ms` }}
+        >
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-64 object-cover rounded-lg border-2 border-border group-hover:border-primary transition-colors duration-300"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg">
+            <div className="absolute bottom-3 left-3 right-3 text-white text-center">
+              <p className="text-sm font-semibold">{member.name}</p>
+              <p className="text-xs opacity-80">{member.role}</p>
+            </div>
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 <div className="mt-20">
    <Footer />
 </div>

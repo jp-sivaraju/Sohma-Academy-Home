@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileText, Download } from "lucide-react";
 import { useState } from "react";
-import monthly from "../assets/monthly.png"
-import ese1 from "../assets/ese1.png"
-import a1 from "../assets/a1.png"
+import monthly from "../assets/monthly.png";
+import ese1 from "../assets/ese1.png";
+import a1 from "../assets/a1.png";
 
 const Reports = () => {
   const [selectedEdition, setSelectedEdition] = useState("monthly");
@@ -34,8 +34,7 @@ const Reports = () => {
           date: "March 2025",
           url: "https://ria.sohamacademy.org/wp-content/uploads/2025/03/RiA-1st-Annual-Robotics-Exhibition-Special-Edition.pdf",
           image: ese1
-        },
-       
+        }
       ]
     },
     annual: {
@@ -48,8 +47,7 @@ const Reports = () => {
           date: "March 2025",
           url: "https://ria.sohamacademy.org/wp-content/uploads/2025/03/Soham-Activities-Report.pdf",
           image: a1
-        },
-        
+        }
       ]
     }
   };
@@ -63,15 +61,22 @@ const Reports = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
       <section className="pt-20 pb-12 circuit-bg">
-        <div className="container mx-auto px-4">
-          <div className="relative">
-            <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
-            <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl  text-orange-500 font-bold mb-6 animate-fade-in">Reports & Publications</h1>
-              <p className="text-lg text-muted-foreground max-w-4xl animate-fade-in-delayed">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="flex items-start">
+            {/* Blue line ONLY next to heading */}
+            <div className="w-1 h-12 bg-primary animate-slide-up mr-4 mt-1" />
+
+            <div>
+              <h1
+                className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in"
+                style={{ color: "#FAAB34" }}
+              >
+                Reports & Publications
+              </h1>
+              <p className="text-lg text-muted-foreground animate-fade-in-delayed ">
                 Explore our comprehensive collection of reports, publications, and documentation showcasing our journey, 
                 achievements, and impact in robotics education across various schools and institutions.
               </p>
@@ -81,15 +86,15 @@ const Reports = () => {
       </section>
 
       {/* Edition Selector */}
-      <section className="py-8 bg-accent/20">
-        <div className="container mx-auto px-4">
+      <section className="py-3 bg-accent/20">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex justify-center">
             <div className="flex bg-background rounded-lg border border-border overflow-hidden">
               <button
                 onClick={() => setSelectedEdition("monthly")}
                 className={`px-6 py-3 text-sm font-medium transition-colors ${
-                  selectedEdition === "monthly" 
-                    ? "bg-primary text-primary-foreground" 
+                  selectedEdition === "monthly"
+                    ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-accent"
                 }`}
               >
@@ -98,8 +103,8 @@ const Reports = () => {
               <button
                 onClick={() => setSelectedEdition("exhibition")}
                 className={`px-6 py-3 text-sm font-medium transition-colors ${
-                  selectedEdition === "exhibition" 
-                    ? "bg-primary text-primary-foreground" 
+                  selectedEdition === "exhibition"
+                    ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-accent"
                 }`}
               >
@@ -108,8 +113,8 @@ const Reports = () => {
               <button
                 onClick={() => setSelectedEdition("annual")}
                 className={`px-6 py-3 text-sm font-medium transition-colors ${
-                  selectedEdition === "annual" 
-                    ? "bg-primary text-primary-foreground" 
+                  selectedEdition === "annual"
+                    ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-accent"
                 }`}
               >
@@ -121,9 +126,9 @@ const Reports = () => {
       </section>
 
       {/* Reports Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+      <section className="py-2">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-6">
             <h2 className="text-3xl font-bold mb-4 animate-fade-in">{currentData.title}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto animate-fade-in-delayed">
               {currentData.description}

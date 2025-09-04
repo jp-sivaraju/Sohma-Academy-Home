@@ -100,24 +100,25 @@ const Challenges = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section - Updated with consistent styling */}
       <section className="pt-20 pb-12 circuit-bg">
-        <div className="container mx-auto px-4">
-          <div className="relative">
-            <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
-            <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-orange-500 animate-fade-in">Challenges</h1>
-              <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-delayed">
-                Track our robotics club activity challenges and achievements across participating schools
-              </p>
-            </div>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="mb-6 flex items-start relative">
+            <div className="w-1 h-12 bg-primary animate-slide-up absolute left-0 top-1" />
+            <h1 className="text-4xl md:text-5xl font-bold pl-8 text-[#FAAB34] animate-fade-in">
+              Challenges
+            </h1>
           </div>
+          
+          <p className="text-base text-muted-foreground max-w-2xl pl-2 md:pl-8 animate-fade-in-delayed">
+            Track our robotics club activity challenges and achievements across participating schools
+          </p>
         </div>
       </section>
 
-      {/* Year Selector */}
-      <section className="py-8 border-b border-border">
-        <div className="container mx-auto px-4">
+      {/* Year Selector - Updated padding */}
+      <section className="py-2 border-b border-border">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-wrap gap-4 justify-center">
             {years.map((year) => (
               <Button
@@ -133,9 +134,9 @@ const Challenges = () => {
         </div>
       </section>
 
-      {/* Challenge Counter */}
-      <section className="py-8 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
+      {/* Challenge Counter - Updated padding */}
+      <section className="py-2 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="text-center">
             <h2 className="text-lg md:text-xl font-bold whitespace-pre-line">
               {currentData.counter}
@@ -144,9 +145,9 @@ const Challenges = () => {
         </div>
       </section>
 
-      {/* Search and Filters */}
-      <section className="py-8 bg-muted/20">
-        <div className="container mx-auto px-4">
+      {/* Search and Filters - Updated padding */}
+      <section className="py-3 bg-muted/20">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="flex justify-between items-center">
             <div className="text-sm text-muted-foreground">
               Show 30 entries
@@ -162,9 +163,9 @@ const Challenges = () => {
         </div>
       </section>
 
-      {/* Challenges Table */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
+      {/* Challenges Table - Updated padding */}
+      <section className="py-6">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="bg-primary/20 p-4 rounded-t-lg text-center">
             <h3 className="font-bold text-lg">CHALLENGE POINTS</h3>
           </div>

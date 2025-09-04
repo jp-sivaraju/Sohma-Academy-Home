@@ -9,7 +9,7 @@ const VideoSection = () => {
   };
 
   return (
-    <section id="video-section" className="py-20 circuit-bg bg-white">
+    <section id="video-section" className="py-20 px-10 circuit-bg bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
@@ -17,9 +17,8 @@ const VideoSection = () => {
             <h2 className="text-5xl md:text-6xl  text-black font-bold">
               Robotics is Fun,
               <br />
-              <span className="hero-text">Exciting &</span>
-              <br />
-              Engaging!
+              <span className="hero-text">Exciting & Engaging!</span>
+              
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Robotics In Academics is a unique hands-on robotics training 

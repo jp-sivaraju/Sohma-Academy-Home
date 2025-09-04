@@ -88,24 +88,25 @@ const InnovationMela = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
+      {/* Hero Section - Updated with consistent padding and styling */}
       <section className="pt-20 pb-12 circuit-bg">
-        <div className="container mx-auto px-4">
-          <div className="relative">
-            <div className="absolute left-0 top-0 w-1 h-20 bg-primary animate-slide-up"></div>
-            <div className="pl-8">
-              <h1 className="text-4xl md:text-5xl text-orange-500 font-bold mb-6 animate-fade-in">Innovation Mela</h1>
-              <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-delayed">
-                Showcasing innovative robotics projects developed by our students across various domains
-              </p>
-            </div>
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="mb-6 flex items-start relative">
+            <div className="w-1 h-12 bg-primary animate-slide-up absolute left-0 top-1" />
+            <h1 className="text-4xl md:text-5xl font-bold pl-8 text-[#FAAB34] animate-fade-in">
+              Innovation Mela
+            </h1>
           </div>
+          
+          <p className="text-base text-muted-foreground  pl-2 md:pl-8 animate-fade-in-delayed">
+            Showcasing innovative robotics projects developed by our students across various domains
+          </p>
         </div>
       </section>
 
-      {/* Innovation Counter */}
-      <section className="py-12 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4">
+      {/* Innovation Counter - Updated padding */}
+      <section className="py-3 bg-primary text-primary-foreground">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="text-center">
             <h2 className="text-2xl md:text-3xl font-bold whitespace-pre-line">
               {melaData.counter}
@@ -114,9 +115,9 @@ const InnovationMela = () => {
         </div>
       </section>
 
-      {/* Projects Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Projects Grid - Updated padding */}
+      <section className="py-5">
+        <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {melaData.projects.map((project) => (
               <Card 
@@ -167,7 +168,7 @@ const InnovationMela = () => {
                   </div>
                 </div>
                 
-                <div className="p-6">
+                <div className="p-2">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>

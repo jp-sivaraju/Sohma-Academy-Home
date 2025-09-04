@@ -24,7 +24,8 @@ const CSRPartnersSection = () => {
 
   return (
     <section className="py-20 circuit-bg">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+
         {/* CSR Partners */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 animate-fade-in">CSR Partners</h2>
