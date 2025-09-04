@@ -17,7 +17,11 @@ const VideoSection = () => {
             <h2 className="text-5xl md:text-6xl  text-black font-bold">
               Robotics is Fun,
               <br />
-              <span className="hero-text">Exciting & Engaging!</span>
+              
+              <span className="whitespace-nowrap font-semibold text-primary text-2xl">
+  Exciting & Engaging!
+</span>
+
               
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
